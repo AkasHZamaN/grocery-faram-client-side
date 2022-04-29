@@ -1,0 +1,74 @@
+[
+    {
+        "_id": 1,
+        "name":"Fresh Onion",
+        "photo":"https://i.postimg.cc/sx3WvCNz/onion.png",
+        "price": 45,
+        "quantity": 400,
+        "description":"An onion is a round vegetable with a brown skin that grows underground. It has many white layers on its inside which have a strong, sharp smell and taste.",
+        "dealer":"fresh-onion-house"
+    },
+    {
+        "_id": 2,
+        "name":"Fresh Garlic",
+        "photo":"https://i.postimg.cc/wjPgv5GT/garlic.png",
+        "price": 60,
+        "quantity": 250,
+        "description":"Garlic is a plant with long. The stalk rises directly from the flower bulb, which is the part of the plant used as food and medicine.",
+        "dealer":"fresh-garlic-house"
+    },
+    {
+        "_id": 3,
+        "name":"Fresh Capsicum",
+        "photo":"https://i.postimg.cc/vHxt6bP7/capcicum.png",
+        "price": 160,
+        "quantity": 100,
+        "description":"Capsicum, also known as red pepper or chili pepper, is an herb. Its fruit is commonly applied to the skin for arthritis pain and other conditions.",
+        "dealer":"fresh-capsicum-house"
+    },
+    {
+        "_id": 4,
+        "name":"Fresh Tomato",
+        "photo":"https://i.postimg.cc/qv8cjQHz/tomato.png",
+        "price": 35,
+        "quantity": 150,
+        "description":"Tomatoes are the major dietary source of the antioxidant lycopene, which has been linked to many health benefits, including reduced risk of heart disease and cancer. They are also a great source of vitamin C, potassium, folate, and vitamin K.",
+        "dealer":"fresh-tomato-house"
+    },
+    {
+        "_id": 5,
+        "name":"Fresh Orange",
+        "photo":"https://i.postimg.cc/dQHdq3YQ/orange.webp",
+        "price": 190,
+        "quantity": 220,
+        "description":"The word orange describes the juicy, slightly sour, reddish-yellow citrus fruit that comes in many different varieties. Orange comes from the Old French orenge. Initially, the word was used primarily to denote the fruit.",
+        "dealer":"fresh-orange-house"
+    },
+    {
+        "_id": 6,
+        "name":"Fresh Watermelon",
+        "photo":"https://i.postimg.cc/wTnmmrMS/watermelon.webp",
+        "price": 250,
+        "quantity": 300,
+        "description":"The cheery red color comes from lycopene, an antioxidant. Studies show it may help curb your risk of cancer and diabetes as part of a healthy lifestyle. Watermelon has more of this nutrient than any other fruit or veggie even tomatoes.",
+        "dealer":"fresh-watermelon-house"
+    },
+    {
+        "_id": 7,
+        "name":"Fresh Apple",
+        "photo":"https://i.postimg.cc/VkQXTNM7/apple.webp",
+        "price": 220,
+        "quantity": 140,
+        "description":"Apples are an incredibly nutritious fruit that offers multiple health benefits. They're rich in fiber and antioxidants. Eating them is linked to a lower risk of many chronic conditions, including diabetes, heart disease, and cancer.",
+        "dealer":"fresh-apple-house"
+    },
+    {
+        "_id": 8,
+        "name":"Fresh Papaya",
+        "photo":"https://i.postimg.cc/Sx6cppfm/papaya.webp",
+        "price": 150,
+        "quantity": 80,
+        "description":"Papayas contain high levels of antioxidants vitamin A, vitamin C, and vitamin E. Diets high in antioxidants may reduce the risk of heart disease. The antioxidants prevent the oxidation of cholesterol. When cholesterol oxidizes, it's more likely to create blockages that lead to heart disease.",
+        "dealer":"fresh-papaya-house"
+    }
+]

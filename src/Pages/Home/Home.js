@@ -4,7 +4,7 @@ import { Carousel } from "react-bootstrap";
 const Home = () => {
   return (
     <div>
-      <div>
+      <div className="my-3">
         <Carousel>
           <Carousel.Item>
             <img
