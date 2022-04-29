@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Carousel } from "react-bootstrap";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useProduct from "../../hooks/useProduct";
 import HomeProduct from "./HomeProduct";
 
@@ -67,7 +67,7 @@ const Home = () => {
                 products.slice(0,6).map(homeItem => <HomeProduct key={homeItem._id} homeItem={homeItem}></HomeProduct>)
             }
         </div>
-        <div className="w-25 mx-auto">
+        <div className="w-25 mx-auto my-3">
         <Button className="w-100" variant="outline-success" onClick={goInventory}>See More</Button>
         </div>
         </div>

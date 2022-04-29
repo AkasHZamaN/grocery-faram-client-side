@@ -6,14 +6,17 @@ import Inventory from './Pages/Inventory/Inventory';
 import Home from './Pages/Home/Home';
 import Registration from './Pages/Registration/Registration';
 import Login from './Pages/Login/Login';
+import ItemDetails from './Pages/Inventory/ItemDetails';
+
 
 function App() {
   return (
     <div>
       <Header></Header>
       <Routes>
-        <Route path='/' element={< Home />}></Route>
-        <Route path='/inventory' element={< Inventory />}></Route>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/inventory' element={<Inventory></Inventory>}></Route>
+        <Route path='/inventoryItem/:id' element={<ItemDetails></ItemDetails>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
