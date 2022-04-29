@@ -1,7 +1,16 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
+import { Button, Carousel } from "react-bootstrap";
+import { Navigate, useNavigate } from "react-router-dom";
+import useProduct from "../../hooks/useProduct";
+import HomeProduct from "./HomeProduct";
 
 const Home = () => {
+    const [products] = useProduct();
+    const navigate = useNavigate();
+
+    const goInventory = () =>{
+        navigate('/inventory');
+    }
   return (
     <div>
       <div className="my-3">
@@ -48,6 +57,20 @@ const Home = () => {
           </Carousel.Item>
         </Carousel>
       </div>
+        
+        {/* home products  */}
+
+        <div>
+            <h3 className="text-center text-success my-3">Grocery Items are stock in our wearhouse!!</h3>
+        <div className='w-100 mx-auto row row-cols-1 row-cols-lg-3 g-4'>
+            {
+                products.slice(0,6).map(homeItem => <HomeProduct key={homeItem._id} homeItem={homeItem}></HomeProduct>)
+            }
+        </div>
+        <div className="w-25 mx-auto">
+        <Button className="w-100" variant="outline-success" onClick={goInventory}>See More</Button>
+        </div>
+        </div>
     </div>
   );
 };

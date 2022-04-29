@@ -10,8 +10,8 @@ const InventoryItem = ({item}) => {
           <Card.Img style={{height:'280px',borderRadius:'7px'}} variant="top" src={photo} />
           <Card.Body>
             <Card.Title>{name}</Card.Title>
-            <h4>{price}</h4>
-            <h6>{quantity}</h6>
+            <h4>{price} ৳</h4>
+            <h6>{quantity} kg</h6>
             <Card.Text>
               {description}
             </Card.Text>

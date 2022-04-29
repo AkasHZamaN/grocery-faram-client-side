@@ -28,6 +28,15 @@
     },
     {
         "_id": 4,
+        "name":"Fresh Potato",
+        "photo":"https://i.postimg.cc/nzYYc6mt/potato.webp",
+        "price": 25,
+        "quantity": 370,
+        "description":"Potatoes are a good source of fiber, which can help you lose weight by keeping you full longer. Fiber can help prevent heart disease by keeping cholesterol and blood sugar levels in check. Potatoes are also full of antioxidants that work to prevent diseases and vitamins that help your body function properly.",
+        "dealer":"fresh-potato-house"
+    },
+    {
+        "_id": 5,
         "name":"Fresh Tomato",
         "photo":"https://i.postimg.cc/qv8cjQHz/tomato.png",
         "price": 35,
@@ -36,7 +45,7 @@
         "dealer":"fresh-tomato-house"
     },
     {
-        "_id": 5,
+        "_id": 6,
         "name":"Fresh Orange",
         "photo":"https://i.postimg.cc/dQHdq3YQ/orange.webp",
         "price": 190,
@@ -45,7 +54,7 @@
         "dealer":"fresh-orange-house"
     },
     {
-        "_id": 6,
+        "_id": 7,
         "name":"Fresh Watermelon",
         "photo":"https://i.postimg.cc/wTnmmrMS/watermelon.webp",
         "price": 250,
@@ -54,7 +63,7 @@
         "dealer":"fresh-watermelon-house"
     },
     {
-        "_id": 7,
+        "_id": 8,
         "name":"Fresh Apple",
         "photo":"https://i.postimg.cc/VkQXTNM7/apple.webp",
         "price": 220,
@@ -63,7 +72,7 @@
         "dealer":"fresh-apple-house"
     },
     {
-        "_id": 8,
+        "_id": 9,
         "name":"Fresh Papaya",
         "photo":"https://i.postimg.cc/Sx6cppfm/papaya.webp",
         "price": 150,
