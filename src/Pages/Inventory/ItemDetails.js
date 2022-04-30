@@ -16,8 +16,20 @@ const ItemDetails = () => {
 
     return (
         <div>
-            <h1>This is items Details: {id}</h1>
-            <p>{products?.name}</p>
+            <div className='d-felx row row-cols-1 row-cols-lg-2 g-4'>
+            <div>
+                <img src={products.photo} alt="" />
+            </div>
+            <div>
+                <h3>{products.name}</h3>
+                <h5>{products.price} ৳</h5>
+                <p>{products.quantity} {products.sold}</p>
+                <p>{products.description}</p>
+
+            </div>
+            </div>
+            {/* <h1>This is items Details: {id}</h1>
+            <p>{products.name}</p> */}
         </div>
     );
 };

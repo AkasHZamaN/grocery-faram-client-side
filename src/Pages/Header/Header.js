@@ -16,7 +16,7 @@ const Header = () => {
       <div className="py-2">
         <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
           <Container>
-            <Navbar.Brand as={Link} to="/">
+            <Navbar.Brand className="bg-danger bg-opacity-75 px-2 rounded-3" as={Link} to="/">
               Grocery Farm
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -63,7 +63,7 @@ const Header = () => {
                 </Link>
                   {
                     user ? 
-                    <Button onClick={userSignOut} className="bg-danger" >Log Out</Button> 
+                    <Button onClick={userSignOut} className="bg-danger border-0 bg-opacity-75 rounded-3" >Log Out</Button> 
                     :
                     <Link
                     className="text-white text-decoration-none me-3"

@@ -68,7 +68,7 @@ const Home = () => {
             }
         </div>
         <div className="w-25 mx-auto my-3">
-        <Button className="w-100" variant="outline-success" onClick={goInventory}>See More</Button>
+        <Button className="w-100" variant="outline-success" onClick={goInventory}>More Product</Button>
         </div>
         </div>
     </div>

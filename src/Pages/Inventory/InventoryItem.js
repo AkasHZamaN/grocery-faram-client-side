@@ -17,7 +17,7 @@ const InventoryItem = ({item}) => {
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <h4>{price} ৳</h4>
-            <h6>{quantity} kg</h6>
+            <h6>{quantity} kg stock</h6>
             <Card.Text>
               {description}
             </Card.Text>
