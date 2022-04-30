@@ -16,7 +16,7 @@ const ItemDetails = () => {
 
     return (
         <div>
-            <div className='d-felx row row-cols-1 row-cols-lg-2 g-4'>
+            <div className='container d-felx row row-cols-1 row-cols-lg-2 g-4'>
             <div>
                 <img src={products.photo} alt="" />
             </div>

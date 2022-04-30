@@ -85,7 +85,7 @@
         "photo":"https://i.postimg.cc/Sx6cppfm/papaya.webp",
         "price": 150,
         "quantity": 80,
-        "sold":"available",
+        "available":"In Stock",
         "description":"Papayas contain high levels of antioxidants vitamin A, vitamin C, and vitamin E. Diets high in antioxidants may reduce the risk of heart disease. The antioxidants prevent the oxidation of cholesterol. When cholesterol oxidizes, it's more likely to create blockages that lead to heart disease.",
         "dealer":"fresh-papaya-house"
     }

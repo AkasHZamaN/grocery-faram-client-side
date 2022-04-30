@@ -3,7 +3,7 @@ import { Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const InventoryItem = ({item}) => {
-    const {_id, name, photo, price, quantity, description, dealer} = item;
+    const {_id, name, available, photo, price, quantity, description, dealer} = item;
     const navigate = useNavigate();
 
     const orderNow = (id) => {
@@ -17,7 +17,7 @@ const InventoryItem = ({item}) => {
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <h4>{price} ৳</h4>
-            <h6>{quantity} kg stock</h6>
+            <h6>{quantity} </h6>
             <Card.Text>
               {description}
             </Card.Text>
