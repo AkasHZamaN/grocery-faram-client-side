@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import auth from '../../firebase.init'
 import Loading from "../Loading/Loading";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
     const [errorText, setErrorText] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+
+    let form = location.state.form.pathname || '/';
 
 
     const [
@@ -27,7 +31,7 @@ const Login = () => {
        )
     }
     if(user){
-        navigate('/')
+        navigate(form, {replace: true});
     }
 
     if(loading){
@@ -71,6 +75,7 @@ const Login = () => {
           </Link>
         </p>
       </div>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };
