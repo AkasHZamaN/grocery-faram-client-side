@@ -10,14 +10,21 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    let form = location.state.form.pathname || '/';
-
+    let from = location?.state?.from?.pathname || '/';
 
     const [
         signInWithEmailAndPassword,
         user,
         loading  
       ] = useSignInWithEmailAndPassword(auth);
+
+      if(user){
+        navigate(from, { replace: true });
+    }
+
+    if(loading){
+        return <Loading></Loading>
+    }
 
     const userLogin = (event) =>{
         event.preventDefault();
@@ -29,13 +36,6 @@ const Login = () => {
        .catch(
            setErrorText('Please Check Your Email && Password!!')
        )
-    }
-    if(user){
-        navigate(form, {replace: true});
-    }
-
-    if(loading){
-        return <Loading></Loading>
     }
 
   return (

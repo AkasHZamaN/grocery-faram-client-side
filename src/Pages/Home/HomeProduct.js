@@ -1,10 +1,15 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const HomeProduct = ({homeItem}) => {
-    const {name, photo, price, quantity, description, dealer} = homeItem;
+    const {_id, name, photo, price, quantity, description, dealer} = homeItem;
+    const navigate = useNavigate();
 
     
+    const orderNow = (id) => {
+      navigate(`/inventoryItem/${id}`)
+  }
   return (
     <div>
       <div>
@@ -22,7 +27,7 @@ const HomeProduct = ({homeItem}) => {
             <p>
               <small>{dealer}</small>
             </p>
-            <Button variant="success">{name}</Button>
+            <Button onClick={() => orderNow(_id)} variant="success">{name}</Button>
           </Card.Body>
         </Card>
       </div>
