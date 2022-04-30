@@ -33,6 +33,28 @@ const Header = () => {
                 </Link>
               </Nav>
               <Nav>
+                {
+                  user && <>
+                  <Link
+                  className="text-white text-decoration-none me-3"
+                  to="/manageProduct"
+                >
+                  Manage Product
+                </Link>
+                <Link
+                  className="text-white text-decoration-none me-3"
+                  to="/addProduct"
+                >
+                  Add Product
+                </Link>
+                <Link
+                  className="text-white text-decoration-none me-3"
+                  to="/myInventory"
+                >
+                  My Inventory
+                </Link>
+                  </>
+                }
                 <Link
                   className="text-white text-decoration-none me-3"
                   to="/registration"
