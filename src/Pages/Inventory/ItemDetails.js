@@ -14,17 +14,52 @@ const ItemDetails = () => {
         })
     },[id])
 
+    // const updateCount = (isIncrease) =>{
+    //     const num = document.getElementById('number');
+    //     const numberValue = num.value;
+    //     if(isIncrease){
+    //         num.value = parseInt(numberValue) + 1;
+    //     }
+    //     else if(numberValue > 0){
+    //         num.value = parseInt(numberValue) - 1;
+    //     }
+    // }
+    const countPlus = () => {
+        const count = document.getElementById('number'); 
+        const number = count.value; 
+        if( !isNaN( number )) 
+        {
+            count.value++;
+        }
+        return false;
+    }
+    const countMinus = () => {
+        const count = document.getElementById('number'); 
+        const number = count.value; 
+        if( !isNaN( number ) && number > 0) 
+        {
+            count.value--;
+        }
+        return false;
+    }
+
     return (
         <div>
-            <div className='container d-felx row row-cols-1 row-cols-lg-2 g-4'>
+            <div className='container w-100 mx-auto my-5 d-felx row row-cols-1 row-cols-lg-2 g-4'>
             <div>
-                <img src={products.photo} alt="" />
+                <img style={{height:'300px'}} className='w-100 mx-auto rounded-3' src={products.photo} alt="" />
             </div>
             <div>
                 <h3>{products.name}</h3>
                 <h5>{products.price} ৳</h5>
-                <p>{products.quantity} {products.sold}</p>
+                <p>{products.quantity} <span style={{border:'2px solid goldenrod', borderRadius:'5px', padding:'0 5px' }}> {products.available}</span></p>
                 <p>{products.description}</p>
+
+                <div className='d-flex'>
+                    <button style={{border:'2px solid goldenrod', borderRadius:'5px', padding:'0 10px',}} onClick={countMinus}  >-</button>
+                    <input style={{width:'60px', border:'2px solid goldenrod', borderRadius:'5px', margin:'0 5px'}} type="text" name="number" id="number" defaultValue="1"/>
+                    <button onClick={countPlus} style={{border:'2px solid goldenrod', borderRadius:'5px', padding:'0 10px',}}>+</button>
+                </div>
 
             </div>
             </div>
