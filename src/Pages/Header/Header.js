@@ -37,7 +37,7 @@ const Header = () => {
                   user && <>
                   <Link
                   className="text-white text-decoration-none me-3"
-                  to="/manageProduct"
+                  to="/myProduct"
                 >
                   My Product
                 </Link>
