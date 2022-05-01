@@ -3,7 +3,7 @@ import useProduct from '../../hooks/useProduct';
 import InventoryItem from './InventoryItem';
 
 const Inventory = () => {
-    const [products, setProducts] = useProduct();
+    const [products] = useProduct();
     return (
         <div>
             <h3 className='text-center my-3 text-success'>Items are available in Grocery Farm wearhouse</h3>
