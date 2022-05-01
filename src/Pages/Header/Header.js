@@ -55,12 +55,17 @@ const Header = () => {
                 </Link>
                   </>
                 }
-                <Link
+                {
+                  !user ?
+                  <Link
                   className="text-white text-decoration-none me-3"
                   to="/registration"
                 >
                   Registration
                 </Link>
+                :
+                ''
+                }
                   {
                     user ? 
                     <Button onClick={userSignOut} className="bg-danger border-0 bg-opacity-75 rounded-3" >Log Out</Button> 
