@@ -39,7 +39,7 @@ const Header = () => {
                   className="text-white text-decoration-none me-3"
                   to="/manageProduct"
                 >
-                  Manage Product
+                  My Product
                 </Link>
                 <Link
                   className="text-white text-decoration-none me-3"

@@ -28,7 +28,7 @@ function App() {
         </PrivateRoute>}>
         </Route>
 
-        <Route path='/manageProduct' element={<ManageProduct></ManageProduct>}></Route>
+        <Route path='/myProduct' element={<ManageProduct></ManageProduct>}></Route>
         <Route path='/addProduct' element={<AddProduct></AddProduct>}></Route>
         <Route path='/myInventory' element={<MyInventory></MyInventory>}></Route>
 
