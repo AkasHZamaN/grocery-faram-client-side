@@ -1,10 +1,30 @@
 import React from 'react';
 import { TrashIcon } from '@heroicons/react/solid';
+import useProduct from '../../hooks/useProduct';
+
 const MyInventoryDetails = ({prodItem}) => {
-    const {name, price, quantity, photo, available, dealer} = prodItem;
+    const [products, setProducts] = useProduct();
+    const {_id, name, price, quantity, photo, available, dealer} = prodItem;
+
+    const deleteItem = id =>{
+        const proceed = window.confirm('WARNING!! Are You Sure?');
+        if(proceed){
+            const url = `http://localhost:5000/product/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data);
+                const remainingItem = products.filter(prod => prod._id !== id);
+                setProducts(remainingItem);
+            });
+        }
+    }
+    
     return (
         <div>
-           <div className='d-flex justify-content-between align-items-center  rounded-3 px-3 py-2 border'>
+             <div className='d-flex justify-content-between align-items-center  rounded-3 px-3 py-2 border'>
                <div>
                    <img style={{height:'100px',borderRadius:'10px'}} className="w-75 mx-auto" src={photo} alt="" />
                </div>
@@ -15,7 +35,7 @@ const MyInventoryDetails = ({prodItem}) => {
                    <small className='bg-light bg-opacity-70 px-2 rounded-3'>{dealer}</small>
                </div>
                <div>
-                    <TrashIcon style={{height:'30px'}}></TrashIcon>
+                    <TrashIcon onClick={()=>deleteItem(_id)} style={{height:'30px', cursor:'pointer', color:'#27a745'}}></TrashIcon>
                </div>
            </div>
         </div>

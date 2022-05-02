@@ -8,10 +8,10 @@ import Registration from './Pages/Registration/Registration';
 import Login from './Pages/Login/Login';
 import ItemDetails from './Pages/Inventory/ItemDetails';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
-import ManageProduct from './Pages/ManageProduct/ManageProduct';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import MyInventory from './Pages/MyInventory/MyInventory';
 import NotFound from './Pages/NotFound/NotFound';
+import MyProduct from './Pages/MyProduct/MyProduct';
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
         </PrivateRoute>}>
         </Route>
 
-        <Route path='/myProduct' element={<ManageProduct></ManageProduct>}></Route>
+        <Route path='/myProduct' element={<MyProduct></MyProduct>}></Route>
         <Route path='/addProduct' element={<AddProduct></AddProduct>}></Route>
         <Route path='/myInventory' element={<MyInventory></MyInventory>}></Route>
 
