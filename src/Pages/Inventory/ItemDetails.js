@@ -44,7 +44,8 @@ const ItemDetails = () => {
     }
 
     const getInventory = () =>{
-        navigate('/myInventory')
+        navigate('/inventory')
+        // navigate('/myInventory')
     }
 
     return (
