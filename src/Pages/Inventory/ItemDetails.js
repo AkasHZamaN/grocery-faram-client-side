@@ -9,17 +9,17 @@ import { StarIcon } from '@heroicons/react/solid';
 
 const ItemDetails = () => {
     const {id} = useParams();
-    const [productView, setproductView] = useState([]);
+    const [productView, setProductView] = useState({});
     const navigate = useNavigate();
 
     
 
     useEffect(()=>{
-        fetch(`https://raw.githubusercontent.com/AkasHZamaN/red-onion-restuarent/main/public/products.json`)
+        const url = `http://localhost:5000/product/${id}`;
+        fetch(url)
         .then(res => res.json())
         .then(data => {
-            const productInfo = data?.find(item => item?._id === parseInt(id)) 
-            setproductView(productInfo);
+            setProductView(data);
         })
     },[id])
 
@@ -53,6 +53,9 @@ const ItemDetails = () => {
             <div className='container w-100 mx-auto my-5 d-felx row row-cols-1 row-cols-lg-2 g-4'>
                 <div>
                     <img style={{height:'300px'}} className='w-100 mx-auto rounded-3' src={productView?.photo} alt="" />
+                    <div className='w-75 mx-auto my-5'>
+                    <Button className='w-100 my-2' variant="outline-success px-3">ADD TO CART</Button>
+                    </div>
                 </div>
                 <div>
                     <h3>{productView.name}</h3>
@@ -84,7 +87,7 @@ const ItemDetails = () => {
                     </div>
                 </div>
             </div>
-           <div className='w-50 mx-auto border'>
+           <div className='w-50 mx-auto'>
            <Button onClick={getInventory} variant="outline-success w-100 rounded-3">GET MORE PRODUCT</Button>
            </div>
             

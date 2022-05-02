@@ -6,7 +6,7 @@ const InventoryItem = ({item}) => {
     const { _id, name, available, photo, price, quantity, description, dealer} = item;
     const navigate = useNavigate();
 
-    const orderNow = (id) => {
+    const singleProduct = (id) => {
         navigate(`/inventoryItem/${id}`)
     }
   return (
@@ -22,7 +22,7 @@ const InventoryItem = ({item}) => {
               {description}
             </Card.Text>
             <p><small>{dealer}</small></p>
-            <Button onClick={() => orderNow(_id)} variant="success">{name}</Button>
+            <Button onClick={() => singleProduct(_id)} variant="success">{name}</Button>
           </Card.Body>
         </Card>
       </div>
