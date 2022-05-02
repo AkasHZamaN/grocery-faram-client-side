@@ -51,7 +51,7 @@ const Header = () => {
                   className="text-white text-decoration-none me-3"
                   to="/myInventory"
                 >
-                  My Inventory
+                  Manage Inventory
                 </Link>
                   </>
                 }

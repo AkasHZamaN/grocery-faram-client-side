@@ -27,7 +27,7 @@ const HomeProduct = ({homeItem}) => {
             <p>
               <small>{dealer}</small>
             </p>
-            <Button onClick={() => orderNow(_id)} variant="success">{name}</Button>
+            <Button onClick={() => orderNow(_id)} variant="success">UPDATE PRODUCT</Button>
           </Card.Body>
         </Card>
       </div>

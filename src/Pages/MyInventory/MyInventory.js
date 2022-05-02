@@ -20,8 +20,8 @@ const MyInventory = () => {
                     products.map(prodItem =><MyInventoryDetails key={prodItem._id} prodItem={prodItem}></MyInventoryDetails>)
                 }
             </div>
-            <div className="w-50 mx-auto text-center my-4">
-            <Button onClick={addNewItem} variant="outline-success w-50">Add Product</Button>
+            <div className="w-75 mx-auto text-center my-4">
+            <Button onClick={addNewItem} variant="outline-success w-50">ADD PRODUCT</Button>
             </div>
         </div>
     );
