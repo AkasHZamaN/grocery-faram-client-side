@@ -7,6 +7,18 @@ const AddProduct = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    const url = `http://localhost:5000/product`;
+    fetch(url,{
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res =>res.json())
+    .then(result =>{
+        console.log(result);
+    })
   }
   return (
     <div>
@@ -18,10 +30,13 @@ const AddProduct = () => {
             {...register("name", { required: true, maxLength: 20 })}
           />
           <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Product Price"  type="number" {...register("price")} />
+          <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Type 'In Stock' "  type="text" {...register("available")} />
+
+
           <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Product Quantity"  type="number" {...register("quantity")} />
           <textarea className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Product Description"  {...register("description")} />
           <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Dealer Name"  type="text" {...register("dealer")} />
-          <Button className="my-4 fw-bold" variant="outline-success">ADD PRODUCT</Button>
+          <Button variant="outline-success" as="input" type="submit" value="ADD PRODUCT" />{' '}
         </form>
       </div>
     </div>
