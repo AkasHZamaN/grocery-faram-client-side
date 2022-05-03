@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 
 const AddProduct = () => {
   const { register, handleSubmit } = useForm();
+  
 
   const onSubmit = (data) => {
     console.log(data);
@@ -30,7 +31,7 @@ const AddProduct = () => {
             {...register("name", { required: true, maxLength: 20 })}
           />
           <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Product Price"  type="number" {...register("price")} />
-          <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Type 'In Stock' "  type="text" {...register("available")} />
+          <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Type 'In Stock' " type="text" {...register("available")} />
 
 
           <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Product Quantity"  type="number" {...register("quantity")} />
