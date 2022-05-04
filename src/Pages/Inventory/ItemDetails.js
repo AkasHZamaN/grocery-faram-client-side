@@ -28,7 +28,7 @@ const ItemDetails = () => {
       console.log(number)
 
     //   send data in the database
-      if(number > 0){
+      if(number > 0 && number !== ''){
         const quantity = parseInt(productView.quantity) + parseInt(number);
         const reStockQuantity = { quantity };
         console.log(reStockQuantity);
