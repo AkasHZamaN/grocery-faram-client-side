@@ -31,6 +31,12 @@ const Header = () => {
                 >
                   Inventory
                 </Link>
+                <Link
+                  className="text-white text-decoration-none me-3"
+                  to="/blogs"
+                >
+                  Blogs
+                </Link>
               </Nav>
               <Nav>
                 {
