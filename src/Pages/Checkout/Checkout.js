@@ -11,7 +11,7 @@ const Checkout = () => {
     const {id}= useParams();
     const [productView] = useProductDetails(id);
     const [user] = useAuthState(auth);
-    
+
     // send order data in the database
     const handlePlaceOrder = event =>{
         event.preventDefault();
@@ -40,9 +40,9 @@ const Checkout = () => {
             <div>
             <h4 className='w-75 mx-auto my-4'>ORDER ID: {id}</h4>
                 <form onSubmit={handlePlaceOrder}>
-                    <input style={{border:'1px solid #28a745',borderRadius:'5px'}} className='d-flex flex-column mb-2 px-3 py-2 w-75 mx-auto' type="text" name="displayName" id="displayName" defaultValue={user.displayName} placeholder='Your Name' readOnly required/>
+                    <input style={{border:'1px solid #28a745',borderRadius:'5px'}} className='d-flex flex-column mb-2 px-3 py-2 w-75 mx-auto' type="text" name="displayName" id="displayName" defaultValue={user?.displayName} placeholder='Your Name' readOnly required/>
 
-                    <input style={{border:'1px solid #28a745',borderRadius:'5px'}} className='d-flex flex-column mb-2 px-3 py-2 w-75 mx-auto' type="text" name="email" id="email" defaultValue={user.email} placeholder='Your Email' readOnly  required/>
+                    <input style={{border:'1px solid #28a745',borderRadius:'5px'}} className='d-flex flex-column mb-2 px-3 py-2 w-75 mx-auto' type="text" name="email" id="email" defaultValue={user?.email} placeholder='Your Email' readOnly  required/>
 
                     <input style={{border:'1px solid #28a745',borderRadius:'5px'}} className='d-flex flex-column mb-2 px-3 py-2 w-75 mx-auto' type="text" name="name" id="name" defaultValue={productView.name} placeholder='Your Product' readOnly  required/>
 

@@ -15,7 +15,7 @@ const Login = () => {
     const location = useLocation();
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-    let from = location?.state?.from?.pathname || '/';
+    let from = location.state?.from?.pathname || '/';
 
     const [
         signInWithEmailAndPassword,
@@ -35,7 +35,6 @@ const Login = () => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        console.log(email, password);
 
        signInWithEmailAndPassword(email, password)
        .catch(
