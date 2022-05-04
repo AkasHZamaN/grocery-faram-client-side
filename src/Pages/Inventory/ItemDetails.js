@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { StarIcon } from "@heroicons/react/solid";
+import useProductDetails from "../../hooks/useProductDetails";
 
 
 const ItemDetails = () => {
   const { id } = useParams();
-  const [productView, setProductView] = useState({});
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const url = `http://localhost:5000/product/${id}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setProductView(data);
-      });
-  }, [id]);
+  const [productView] = useProductDetails(id);
 
   const getInventory = () => {
     navigate("/inventory");
@@ -87,9 +79,9 @@ const ItemDetails = () => {
             alt=""
           />
           <div className="w-75 mx-auto my-5">
-            <Link to={"/myProduct"}>
+            <Link to={`/checkout/${id}`}>
               <Button className="w-100 my-2" variant="outline-success px-3">
-                ADD TO CART
+                PROCEED TO CHECKOUT
               </Button>
             </Link>
           </div>

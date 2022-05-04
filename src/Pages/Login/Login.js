@@ -5,8 +5,8 @@ import auth from '../../firebase.init'
 import Loading from "../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
-import {toast, ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {toast} from 'react-toastify';
+
 
 const Login = () => {
     const [errorText, setErrorText] = useState('');
@@ -91,7 +91,7 @@ const Login = () => {
           </Link>
         </p>
       </div>
-      <ToastContainer></ToastContainer>
+      
       <SocialLogin></SocialLogin>
     </div>
   );

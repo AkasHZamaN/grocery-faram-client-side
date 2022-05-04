@@ -13,14 +13,15 @@ import MyInventory from './Pages/MyInventory/MyInventory';
 import NotFound from './Pages/NotFound/NotFound';
 import MyProduct from './Pages/MyProduct/MyProduct';
 import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Blogs from './Pages/Blogs/Blogs';
+import Checkout from './Pages/Checkout/Checkout';
 
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <ToastContainer></ToastContainer>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/inventory' element={<Inventory></Inventory>}></Route>
@@ -29,6 +30,11 @@ function App() {
         <Route path='/inventoryItem/:id' element={
         <PrivateRoute>
           <ItemDetails></ItemDetails>
+        </PrivateRoute>}>
+        </Route>
+        <Route path='/checkout/:id' element={
+        <PrivateRoute>
+          <Checkout></Checkout>
         </PrivateRoute>}>
         </Route>
 
@@ -40,6 +46,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
