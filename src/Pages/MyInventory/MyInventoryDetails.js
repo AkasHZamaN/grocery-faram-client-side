@@ -20,8 +20,9 @@ const MyInventoryDetails = ({prodItem}) => {
                 setProducts(remainingItem);
             });
         }
+        window.location.reload();
     }
-    
+
     return (
         <div>
              <div className='d-flex justify-content-between align-items-center  rounded-3 px-3 py-2 border'>
