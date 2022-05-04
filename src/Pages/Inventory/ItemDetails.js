@@ -22,13 +22,35 @@ const ItemDetails = () => {
     navigate("/inventory");
   };
 
-  const changeQuantity = (event) => {
-    console.log(event.target.value);
-    const { quantity, ...rest } = productView;
-    const newQuantity = event.target.value;
-    const getNewQuantity = { quantity: newQuantity, ...rest };
-    console.log(getNewQuantity);
-    setProductView(getNewQuantity);
+  const reStock = (event) => {
+      event.preventDefault();
+      const number = parseInt(event.target.number.value);
+      console.log(number)
+
+    //   send data in the database
+      if(number > 0){
+        const quantity = parseInt(productView.quantity) + parseInt(number);
+        const reStockQuantity = { quantity };
+        console.log(reStockQuantity);
+
+        const url = `http://localhost:5000/product/${id}`;
+        fetch(url, {
+            method:'PUT',
+            headers: {
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(reStockQuantity)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            alert('Successfully Added Quantity of This Product')
+            window.location.reload();
+        });
+      }
+      else{
+          alert('Please INPUT Positive Value otherwise get Error');
+      }
   };
 
   // decrease quantity
@@ -49,8 +71,8 @@ const ItemDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log("success", data);
-        window.location.reload();
         alert("Quantity will Decrease after RELOAD ")
+        window.location.reload();
       });
   };
 
@@ -135,9 +157,9 @@ const ItemDetails = () => {
           </p>
 
           <div className="w-100 mx-auto d-flex row row-cols-2 row-cols-lg-2 g-4 my-5 ">
-            <form>
+            <form onSubmit={reStock}>
               <input
-                onChange={changeQuantity}
+                
                 style={{
                   width: "90px",
                   border: "1px solid  #28a745",
@@ -147,7 +169,7 @@ const ItemDetails = () => {
                   marginBottom: "10px",
                   marginRight: "5px",
                 }}
-                defaultValue={productView.quantity}
+                // defaultValue={productView.quantity}
                 type="number"
                 name="number"
                 id=""
