@@ -38,9 +38,17 @@ function App() {
         </PrivateRoute>}>
         </Route>
 
-        <Route path='/myProduct' element={<MyProduct></MyProduct>}></Route>
-        <Route path='/addProduct' element={<AddProduct></AddProduct>}></Route>
-        <Route path='/myInventory' element={<MyInventory></MyInventory>}></Route>
+        <Route path='/myProduct' element={<PrivateRoute>
+          <MyProduct></MyProduct>
+        </PrivateRoute>}></Route>
+
+        <Route path='/addProduct' element={<PrivateRoute>
+          <AddProduct></AddProduct>
+        </PrivateRoute>}></Route>
+
+        <Route path='/myInventory' element={<PrivateRoute>
+          <MyInventory></MyInventory>
+        </PrivateRoute>}></Route>
 
         <Route path='/registration' element={<Registration></Registration>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
