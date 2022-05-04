@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import auth from '../../firebase.init'
 import Loading from "../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import {toast, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [errorText, setErrorText] = useState('');
+    const emailRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     let from = location?.state?.from?.pathname || '/';
 
@@ -37,6 +42,16 @@ const Login = () => {
            setErrorText('Please Check Your Email && Password!!')
        )
     }
+    const resetPassword = async() =>{
+      const email = emailRef.current.value;
+      await sendPasswordResetEmail(email);
+      if(email){
+        toast('Please Check Your Email');
+      }
+      else{
+        toast('Please Enter Your Email');
+      }
+    }
 
   return (
     <div>
@@ -44,6 +59,7 @@ const Login = () => {
         <h3 className="text-success py-2">Grocery Farm Login</h3>
         <form onSubmit={userLogin}>
           <input
+            ref={emailRef}
             className="w-75 mx-auto py-1 my-2 form-control border-success d-flex flex-column"
             type="email"
             name="email"
@@ -58,7 +74,7 @@ const Login = () => {
             id="password"
             placeholder="Enter Your Password"
           />
-          <p className="w-75 mx-auto text-start">
+          <p onClick={resetPassword} className="w-75 mx-auto text-start">
               <small style={{cursor:'pointer', color:'blue'}}>Forget your password?</small>
           </p>
           <p className="text-warning">{errorText}</p>
@@ -75,6 +91,7 @@ const Login = () => {
           </Link>
         </p>
       </div>
+      <ToastContainer></ToastContainer>
       <SocialLogin></SocialLogin>
     </div>
   );
