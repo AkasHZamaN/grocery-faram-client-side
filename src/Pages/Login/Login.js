@@ -6,6 +6,7 @@ import Loading from "../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import {toast} from 'react-toastify';
+import axios from "axios";
 
 
 const Login = () => {
@@ -24,22 +25,25 @@ const Login = () => {
       ] = useSignInWithEmailAndPassword(auth);
 
       if(user){
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
     if(loading || sending){
         return <Loading></Loading>
     }
 
-    const userLogin = (event) =>{
+    const userLogin = async (event) =>{
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-       signInWithEmailAndPassword(email, password)
+       await signInWithEmailAndPassword(email, password)
        .catch(
            setErrorText('Please Check Your Email && Password!!')
        )
+       const {data} = await axios.post('http://localhost:5000/login', {email});
+       localStorage.setItem('accessToken', data.accessToken);
+       navigate(from, { replace: true });
     }
     const resetPassword = async() =>{
       const email = emailRef.current.value;

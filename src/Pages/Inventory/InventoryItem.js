@@ -17,7 +17,7 @@ const InventoryItem = ({item}) => {
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <h4>{price} ৳</h4>
-            <h6>{quantity} <span style={{border:'2px solid goldenrod', borderRadius:'5px', padding:'0 5px' }}> {available}</span></h6>
+            <h6>{quantity} <span style={{border:'2px solid #28a745', borderRadius:'5px', padding:'0 5px' }}> {available}</span></h6>
             <Card.Text>
               {description}
             </Card.Text>
