@@ -4,17 +4,16 @@ import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Loading/Loading";
-import {useAuthState} from 'react-firebase-hooks/auth';
+
 
 const SocialLogin = () => {
-  const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const [errorText, setErrorText] = useState('');
   const location = useLocation();
 
-  let from = location?.state?.from?.pathname || '/';
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
-  const [signInWithGoogle, loading, error] = useSignInWithGoogle(auth);
+  let from = location?.state?.from?.pathname || '/';
 
 
   if(user){
@@ -53,10 +52,10 @@ const SocialLogin = () => {
             {errorText}
         </p>
         <div className="w-50 mx-auto">
-            <Link to={"/"}>
                 <Button
+                    
                     onClick={() => signInWithGoogle()}
-                    className="bg-success border-0 text-white py-1 fw-bold rounded-3    w-100 mx-auto my-3 d-flex justify-content-center align-items-center"
+                    className="bg-success opacity-75 border-0 text-white py-1 fw-bold rounded-3 w-100 mx-auto my-3 d-flex justify-content-center align-items-center"
                     variant="outline-success"
                     >
                     <img
@@ -66,7 +65,7 @@ const SocialLogin = () => {
                     />
                     Google Sign In
                 </Button>
-            </Link>
+            
         </div>
     </div>
   );

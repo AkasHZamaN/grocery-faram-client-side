@@ -3,7 +3,7 @@ import {
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
@@ -12,7 +12,9 @@ const Registration = () => {
   const [errorText, setErrorText] = useState("");
   const navigate = useNavigate();
   const [updateProfile] = useUpdateProfile(auth);
+  const location = useLocation();
 
+  let from = location.state?.from?.pathname || '/';
   
   const [createUserWithEmailAndPassword, user, loading] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -35,7 +37,7 @@ const Registration = () => {
 
   if (user) {
     console.log("user", user);
-    navigate("/");
+    navigate(from, { replace: true });
   }
 
   if (loading) {
