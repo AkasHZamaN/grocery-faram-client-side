@@ -42,6 +42,7 @@ const AddProduct = () => {
             {...register("name", { required: true, maxLength: 20 })} required
           />
           <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Product Price"  type="number" {...register("price")} required/>
+
           <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Type 'In Stock' " type="text" {...register("available")} required/>
 
 
