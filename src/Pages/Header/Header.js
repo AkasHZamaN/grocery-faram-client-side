@@ -1,3 +1,4 @@
+import { UserAddIcon, UserCircleIcon } from "@heroicons/react/solid";
 import { signOut } from "firebase/auth";
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
@@ -20,12 +21,12 @@ const Header = () => {
       <div className="py-2 text-uppercase">
         <Navbar style={{fontSize:'14px'}} collapseOnSelect expand="lg" bg="" variant="dark">
           <Container>
-            <Navbar.Brand style={{color:'#E07C24'}}  className="fs-3 fw-bold px-2" as={Link} to="/">
-              Grocery Farm
+            <Navbar.Brand style={{color:'#E07C24'}}  className="fs-4 mx-auto fw-bold px-2" as={Link} to="/">
+              {/* Grocery Farm */}
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto">
+              <Nav className="me-auto text-center">
                 <Link className="text-white text-decoration-none me-3" to="/">
                   Home
                 </Link>
@@ -42,7 +43,7 @@ const Header = () => {
                   Blogs
                 </Link>
               </Nav>
-              <Nav>
+              <Nav className="ms-auto text-center">
                 {
                   user && <>
                   <Link
@@ -67,10 +68,11 @@ const Header = () => {
                 }
                 {
                   !user ?
-                  <Link
-                  className="text-white text-uppercase text-decoration-none me-3"
+                    <Link
+                  className="text-white text-uppercase text-decoration-none me-3 d-flex flex-column justify-content-center align-items-center"
                   to="/registration"
                 >
+                  <UserAddIcon style={{height:'25px'}}></UserAddIcon>
                   Registration
                 </Link>
                 :
@@ -78,12 +80,13 @@ const Header = () => {
                 }
                   {
                     user ? 
-                    <Button style={{color:'#E07C24',backgroundColor:'#6A1B4D',border:'2px solid gray', borderRadius:'8px'}} onClick={userSignOut} className=" fw-bold text-uppercase" >Log Out</Button> 
+                    <Button style={{color:'#E07C24',backgroundColor:'#6A1B4D',border:'none', borderRadius:'8px',padding:'0 5px'}} onClick={userSignOut} className=" fw-normal text-uppercase d-flex flex-column justify-content-center align-items-center" ><UserCircleIcon style={{height:'25px'}}></UserCircleIcon>
+                    Log Out</Button> 
                     :
                     <Link
-                    className="text-white text-uppercase text-decoration-none me-3"
+                    className="text-white text-uppercase text-decoration-none me-3 d-flex flex-column justify-content-center align-items-center"
                     to="/login"
-                  >
+                  ><UserCircleIcon style={{height:'25px'}}></UserCircleIcon>
                     Login
                   </Link>
                   } 
