@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 import {useAuthState} from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { TrashIcon, UserIcon, InboxIcon, LocationMarkerIcon, PhoneIcon, PencilAltIcon, ClipboardListIcon } from '@heroicons/react/solid';
+import { TrashIcon, UserIcon, MailOpenIcon, LocationMarkerIcon, PhoneIcon, PencilAltIcon, ClipboardListIcon } from '@heroicons/react/solid';
 import { toast } from 'react-toastify';
 // import { useParams } from 'react-router-dom';
 
@@ -65,11 +65,11 @@ const MyProduct = () => {
                             <p><small><PencilAltIcon style={{height:'20px'}}></PencilAltIcon>{order.id}</small></p>
                             <h6 className='fw-bold text-gray'><small className='text-uppercase fs-5'>{order.name}</small></h6>
                             <p className='fw-bold text-gray'>Quantity: <span className='text-success  fs-5'>{order.quantity}</span> <span className='text-gray'>/kg</span></p>
-                            <p><UserIcon style={{height:'25px'}}></UserIcon> <small className='text-success fw-bold'>{order.displayName}</small></p>
-                            <p><InboxIcon style={{height:'25px'}}></InboxIcon> <span className='text-danger'>{order.email}</span></p>
-                            <p><LocationMarkerIcon style={{height:'25px'}}></LocationMarkerIcon> <small className='text-success fw-bold'>{order.address}</small></p>
-                            <p><PhoneIcon style={{height:'25px'}}></PhoneIcon> <small className='text-success fw-bold'>{order.phone}</small></p>
-                            <p className='w-75 mx-auto bg-success bg-opacity-10 py-1 text-center rounded-3'><TrashIcon onClick={()=>deleteItem(order._id)} style={{height:'30px', cursor:'pointer', color:'#6A1B4D'}}></TrashIcon></p>
+                            <p><UserIcon style={{height:'20px'}}></UserIcon> <small className='text-success fw-bold'>{order.displayName}</small></p>
+                            <p><MailOpenIcon style={{height:'20px'}}></MailOpenIcon> <span className='text-danger'>{order.email}</span></p>
+                            <p><LocationMarkerIcon style={{height:'20px'}}></LocationMarkerIcon> <small className='text-success fw-bold'>{order.address}</small></p>
+                            <p><PhoneIcon style={{height:'20px'}}></PhoneIcon> <small className='text-success fw-bold'>{order.phone}</small></p>
+                            <p className='w-100 py-1 text-center rounded-3'><TrashIcon onClick={()=>deleteItem(order._id)} style={{height:'30px', cursor:'pointer', color:'#6A1B4D',border:'1px solid #6A1B4D',padding:'2px 50px',borderRadius:'8px'}}></TrashIcon></p>
                             </div>
                         </div>
                     </div>)
