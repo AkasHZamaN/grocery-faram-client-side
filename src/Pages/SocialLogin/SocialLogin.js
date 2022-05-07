@@ -33,17 +33,17 @@ const SocialLogin = () => {
       <div className="d-flex justify-content-center align-items-center">
         <div
           style={{
-            height: "2px",
+            height: "1px",
             width: "250px",
-            backgroundColor: "lightgray",
+            backgroundColor: "#6A1B4D",
           }}
         ></div>
-        <p className="mx-2">or</p>
+        <p style={{fontFamily:'baloo2, cursive',fontWeight:'bold', color:'#6A1B4D'}} className="mx-2">or</p>
         <div
           style={{
             height: "1px",
             width: "250px",
-            backgroundColor: "lightgray",
+            backgroundColor: "#6A1B4D",
           }}
         ></div>
       </div>
@@ -53,10 +53,10 @@ const SocialLogin = () => {
         </p>
         <div className="w-50 mx-auto">
                 <Button
-                    
+                    style={{backgroundColor:'#6A1B4D',fontFamily:'baloo2,cursive'}}
                     onClick={() => signInWithGoogle()}
-                    className="bg-success opacity-75 border-0 text-white py-1 fw-bold rounded-3 w-100 mx-auto my-3 d-flex justify-content-center align-items-center"
-                    variant="outline-success"
+                    className="border-0 text-white py-1 fw-bold rounded-3 w-100 mx-auto my-3 d-flex justify-content-center align-items-center"
+                    variant=""
                     >
                     <img
                     style={{ height: "25px", marginRight: "5px" }}

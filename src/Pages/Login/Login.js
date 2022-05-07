@@ -7,7 +7,6 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import {toast} from 'react-toastify';
 import axios from "axios";
-import { LoginIcon } from "@heroicons/react/solid";
 
 
 const Login = () => {
@@ -92,7 +91,7 @@ const Login = () => {
         </form>
         <p style={{fontFamily:'baloo2, cursive'}} className="py-2 text-white">
           Are you new user?
-          <Link className="text-decoration-none ms-2" to={"/registration"}>
+          <Link style={{color:'#E07C24'}} className="text-decoration-none ms-2" to={"/registration"}>
             Please create your account
           </Link>
         </p>
