@@ -16,9 +16,9 @@ const InventoryItem = ({item}) => {
         <Card style={{border:'none'}}>
           <Card.Img style={{height:'280px',borderRadius:'7px'}} variant="top" src={photo} />
           <Card.Body>
-            <Card.Title style={{fontFamily:'baloo2, cursive',fontWeight:'bold',textTransform:'uppercase'}}>{name}</Card.Title>
-            <h5 style={{fontFamily:'baloo2, cursive',fontWeight:'bold'}}>{price} ৳</h5>
-            <div style={{fontFamily:'baloo2, cursive',fontWeight:'bold'}} className="d-flex align-items-center">
+            <Card.Title style={{fontFamily:'baloo2, cursive',fontWeight:'bold',textTransform:'uppercase',color:'#6A1B4D'}}>{name}</Card.Title>
+            <h5 style={{fontFamily:'baloo2, cursive',fontWeight:'bold',color:'#6A1B4D'}}>{price} ৳</h5>
+            <div style={{fontFamily:'baloo2, cursive',fontWeight:'bold',color:'#6A1B4D'}} className="d-flex align-items-center">
             <h6 style={{fontFamily:'baloo2, cursive',fontWeight:'bold'}}>{quantity}</h6>
             <small className="text-gray fw-bold mx-2">/kg</small>
             <span style={{border:'2px solid #6A1B4D', borderRadius:'5px', padding:'0 5px',display:'inline-flex',alignItems:'center'}}><CheckCircleIcon style={{height:'18px',marginRight:'2px',color:'#6A1B4D'}}></CheckCircleIcon> {available}</span>

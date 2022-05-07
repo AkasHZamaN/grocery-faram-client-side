@@ -15,7 +15,7 @@ const Inventory = () => {
 
     return (
         <div>
-            <h4 style={{fontFamily:'baloo2, cursive'}} className="text-center my-5 text-uppercase fw-bold"><CollectionIcon style={{height:'35px'}}></CollectionIcon> Fresh & organic foods collection</h4>
+            <h4 style={{fontFamily:'baloo2, cursive',color:'#6A1B4D'}} className="text-center my-5 text-uppercase fw-bold"><CollectionIcon style={{height:'35px'}}></CollectionIcon> Fresh & organic foods collection</h4>
             <div className='w-100 mx-auto row row-cols-1 row-cols-lg-3 g-4'>
                 {
                     products.map(item =><InventoryItem key={item._id} item={item}></InventoryItem>)
