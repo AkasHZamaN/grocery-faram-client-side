@@ -3,6 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { PlusCircleIcon } from "@heroicons/react/solid";
 
 const AddProduct = () => {
   const { register, handleSubmit } = useForm();
@@ -34,23 +35,24 @@ const AddProduct = () => {
   
   return (
     <div>
-        <h3 className="text-success text-center mt-5">INSERT YOUR NEW PRODUCT</h3>
+        <h4 style={{fontFamily:'baloo2, cursive', color:'#6A1B4D'}} className="mt-5 fw-bold d-flex justify-content-center align-items-center">INSERT YOUR NEW PRODUCT <PlusCircleIcon style={{height:'35px',marginLeft:'5px'}}></PlusCircleIcon></h4>
       <div className="w-75 mx-auto my-5">
-        <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
-        <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Photo Url"  type="text" {...register("photo")} required/>
-          <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} type="text" placeholder="Product Name" 
+        <form style={{fontFamily:'baloo2, cursive'}} className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
+        <input className="mb-2 p-2 rounded" style={{border:'1px solid #6A1B4D'}} placeholder="Photo Url"  type="text" {...register("photo")} required/>
+          <input className="mb-2 p-2 rounded" style={{border:'1px solid #6A1B4D',}} type="text" placeholder="Product Name" 
             {...register("name", { required: true, maxLength: 20 })} required
           />
-          <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Product Price"  type="number" {...register("price")} required/>
+          <input className="mb-2 p-2 rounded" style={{border:'1px solid #6A1B4D',}} placeholder="Product Price"  type="number" {...register("price")} required/>
 
-          <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Type 'In Stock' " type="text" {...register("available")} required/>
+          <input className="mb-2 p-2 rounded" style={{border:'1px solid #6A1B4D',}} placeholder="Type 'In Stock' " type="text" {...register("available")} required/>
 
 
-          <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Product Quantity"  type="number" {...register("quantity")} required/>
-          <textarea className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Product Description"  {...register("description")} required/>
-          <input className="mb-2 p-2 rounded" style={{border:'1px solid #28a745'}} placeholder="Dealer Name"  type="text" {...register("dealer")} />
+          <input className="mb-2 p-2 rounded" style={{border:'1px solid #6A1B4D',}} placeholder="Product Quantity"  type="number" {...register("quantity")} required/>
+          <textarea className="mb-2 p-2 rounded" style={{border:'1px solid #6A1B4D'}} placeholder="Product Description"  {...register("description")} required/>
+          <input className="mb-2 p-2 rounded" style={{border:'1px solid #6A1B4D',}} placeholder="Dealer Name"  type="text" {...register("dealer")} />
          
-          <Button variant="outline-success" as="input" type="submit" value="ADD PRODUCT" />{' '}
+          <Button style={{backgroundColor:'#6A1B4D',color:'white'}} variant="" as="input" type="submit" value="ADD PRODUCT"/>
+           
         </form>
       </div>
     </div>
