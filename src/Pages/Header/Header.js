@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <div style={{backgroundColor:'#6A1B4D', padding:'10px 0', fontFamily:'baloo2, cursive'}}>
       <div className="d-flex justify-content-center align-items-center">
-      <img style={{width:'200px'}} className='h-50' src="https://i.postimg.cc/tRcg8s9V/grocery-farm.png" alt="" />
+      <img style={{width:'200px'}} className='h-50' src="https://i.postimg.cc/qB689Y0r/grocery-farm-1.png" alt="" />
       <h4 style={{color:'lightgray'}} className="text-center text-uppercase fw-bold">Grocery & organic food farm limited</h4>
       </div>
       <div className="py-2 text-uppercase">

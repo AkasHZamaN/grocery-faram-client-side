@@ -7,6 +7,7 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import {toast} from 'react-toastify';
 import axios from "axios";
+import { LoginIcon } from "@heroicons/react/solid";
 
 
 const Login = () => {
@@ -58,9 +59,9 @@ const Login = () => {
 
   return (
     <div>
-      <div className="w-75 mx-auto text-center bg-success bg-opacity-50 rounded my-5 ">
-        <h3 className="text-success py-2">Grocery Farm Login</h3>
-        <form onSubmit={userLogin}>
+      <div style={{backgroundColor:'#6A1B4D'}} className="w-75 mx-auto text-center rounded my-5 ">
+        <img style={{height:'170px'}} src="https://i.postimg.cc/TPy4F034/grocery-farm-LOGO-1.png" alt="" />
+        <form style={{fontFamily:'baloo2,cursive'}} onSubmit={userLogin}>
           <input
             ref={emailRef}
             className="w-75 mx-auto py-1 my-2 form-control border-success d-flex flex-column"
@@ -78,16 +79,18 @@ const Login = () => {
             placeholder="Enter Your Password"
           />
           <p onClick={resetPassword} className="w-75 mx-auto text-start">
-              <small style={{cursor:'pointer', color:'blue'}}>Forget your password?</small>
+              <small style={{cursor:'pointer', color:'white', fontFamily:'baloo2, cursive'}}>Forget your password?</small>
           </p>
           <p className="text-warning">{errorText}</p>
           <input
-            className="w-25 border-0 text-white py-1 my-3 rounded bg-success"
+          style={{backgroundColor:'white',color:'#6A1B4D'}}
+            className="w-25 border-0 fw-bold py-1 my-3 rounded "
             type="submit"
             value="Login"
+            
           />
         </form>
-        <p className="py-2 text-white">
+        <p style={{fontFamily:'baloo2, cursive'}} className="py-2 text-white">
           Are you new user?
           <Link className="text-decoration-none ms-2" to={"/registration"}>
             Please create your account

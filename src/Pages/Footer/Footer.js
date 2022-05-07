@@ -11,7 +11,7 @@ const Footer = () => {
             <div className='w-100 mx-auto d-flex justify-content-between align-items-center row row-cols-1 row-cols-lg-3 g-2 p-3 mt-5'>
                 
                 <div className='d-flex justify-content-center  align-items-center'>
-                    <img style={{width:'200px'}} className='h-50' src="https://i.postimg.cc/tRcg8s9V/grocery-farm.png" alt="" />
+                    <img style={{width:'200px'}} className='h-50' src="https://i.postimg.cc/TPy4F034/grocery-farm-LOGO-1.png" alt="" />
                     <div style={{fontFamily:'baloo2, cursive'}}>
                     <h4 style={{fontFamily:'baloo2, cursive', fontWeight:'bolder', fontSize:'18px', color:'lightgray'}}>GROCERY FARM</h4>
                     <small style={{fontSize:'12px', fontWeight:'bold', fontStyle:'italic', color:'lightgray'}}>EST: 2022</small>
