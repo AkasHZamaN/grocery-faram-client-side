@@ -3,12 +3,13 @@ import { Button } from "react-bootstrap";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { StarIcon } from "@heroicons/react/solid";
 import useProductDetails from "../../hooks/useProductDetails";
+import { toast } from "react-toastify";
 
 
 const ItemDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [productView] = useProductDetails(id);
+  const [productView, setProductView] = useProductDetails(id);
 
   const getInventory = () => {
     navigate("/inventory");
@@ -36,7 +37,8 @@ const ItemDetails = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            alert('Successfully Added Quantity of This Product')
+            toast('Quantity Successfully Added')
+            // setProductView(reStockQuantity);
             window.location.reload();
         });
       }
@@ -49,7 +51,7 @@ const ItemDetails = () => {
   const decreaseQuantity = () => {
     const quantity = parseInt(productView.quantity) - 1;
     const updateQuantity = { quantity };
-    console.log(updateQuantity);
+    // setProductView(updateQuantity);
 
     // send data in the database
     const url = `http://localhost:5000/product/${id}`;
@@ -63,7 +65,7 @@ const ItemDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log("success", data);
-        alert("Quantity will Decrease after RELOAD ")
+        toast("Quantity Successfully Decrease")
         window.location.reload();
       });
   };

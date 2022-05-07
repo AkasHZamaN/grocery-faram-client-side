@@ -1,3 +1,4 @@
+import { CollectionIcon, DotsVerticalIcon } from "@heroicons/react/solid";
 import React from "react";
 import { Button, Carousel } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -61,14 +62,14 @@ const Home = () => {
         {/* home products  */}
 
         <div>
-            <h3 className="text-center text-success my-3">Grocery Items are stock in our wearhouse!!</h3>
+            <h4 style={{fontFamily:'baloo2, cursive'}} className="text-center my-5 text-uppercase fw-bold"><CollectionIcon style={{height:'35px', }}></CollectionIcon> Fresh organic foods are available</h4>
         <div className='w-100 mx-auto row row-cols-1 row-cols-lg-3 g-4'>
             {
                 products.slice(0,6).map(homeItem => <HomeProduct key={homeItem._id} homeItem={homeItem}></HomeProduct>)
             }
         </div>
-        <div className="w-25 mx-auto my-3">
-        <Button className="w-100" variant="outline-success" onClick={goInventory}>More Product</Button>
+        <div className="w-100 text-end my-3">  
+         <Button style={{backgroundColor:'white', color:'#6A1B4D', margin:'0 20px'}} onClick={goInventory}><DotsVerticalIcon style={{height:'22px'}}></DotsVerticalIcon>More Product </Button>
         </div>
         </div>
     </div>

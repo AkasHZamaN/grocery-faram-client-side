@@ -19,6 +19,7 @@ import Checkout from './Pages/Checkout/Checkout';
 import Footer from './Pages/Footer/Footer';
 
 
+
 function App() {
   return (
     <div>

@@ -12,11 +12,15 @@ const Header = () => {
     signOut(auth);
   }
   return (
-    <div className="bg-success">
-      <div className="py-2">
-        <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
+    <div style={{backgroundColor:'#6A1B4D', padding:'10px 0', fontFamily:'baloo2, cursive'}}>
+      <div className="d-flex justify-content-center align-items-center">
+      <img style={{width:'200px'}} className='h-50' src="https://i.postimg.cc/tRcg8s9V/grocery-farm.png" alt="" />
+      <h4 style={{color:'lightgray'}} className="text-center text-uppercase fw-bold">Grocery & organic food farm limited</h4>
+      </div>
+      <div className="py-2 text-uppercase">
+        <Navbar style={{fontSize:'14px'}} collapseOnSelect expand="lg" bg="" variant="dark">
           <Container>
-            <Navbar.Brand className="bg-danger bg-opacity-75 px-2 rounded-3" as={Link} to="/">
+            <Navbar.Brand style={{color:'#E07C24'}}  className="fs-3 fw-bold px-2" as={Link} to="/">
               Grocery Farm
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -64,7 +68,7 @@ const Header = () => {
                 {
                   !user ?
                   <Link
-                  className="text-white text-decoration-none me-3"
+                  className="text-white text-uppercase text-decoration-none me-3"
                   to="/registration"
                 >
                   Registration
@@ -74,10 +78,10 @@ const Header = () => {
                 }
                   {
                     user ? 
-                    <Button onClick={userSignOut} className="bg-danger border-0 bg-opacity-75 rounded-3" >Log Out</Button> 
+                    <Button style={{color:'#E07C24',backgroundColor:'#6A1B4D',border:'2px solid gray', borderRadius:'8px'}} onClick={userSignOut} className=" fw-bold text-uppercase" >Log Out</Button> 
                     :
                     <Link
-                    className="text-white text-decoration-none me-3"
+                    className="text-white text-uppercase text-decoration-none me-3"
                     to="/login"
                   >
                     Login
