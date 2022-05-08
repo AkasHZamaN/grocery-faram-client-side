@@ -1,3 +1,4 @@
+import { InformationCircleIcon, LocationMarkerIcon, MailIcon, PhoneIcon, ShieldCheckIcon } from '@heroicons/react/solid';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -28,9 +29,9 @@ const Footer = () => {
                     </div>
                     <div style={{color:'lightgray'}}>
                         <h5 style={{paddingBottom:'5px'}}>My Contacts</h5>
-                        <p>Phone: +880172585XXXX</p>
-                        <p>E-Mail: grocery@farm.com</p>
-                        <p>Address: <span style={{fontFamily:'cursive'}}>350 Avenue, Sylhet,<br />3100-SYLHET</span></p>
+                        <p><PhoneIcon style={{height:'20px'}}></PhoneIcon> +880172585XXXX</p>
+                        <p><MailIcon style={{height:'20px'}}></MailIcon> grocery@farm.com</p>
+                        <p><LocationMarkerIcon style={{height:'20px'}}></LocationMarkerIcon> <span style={{fontFamily:'cursive'}}>350 Avenue, Sylhet,<br />3100-SYLHET</span></p>
                     </div>
                 </div>
             </div>
@@ -40,8 +41,8 @@ const Footer = () => {
                     <small>Copyright ©{year} || Developed By Akash Zaman</small>
                 </div>
                 <div style={{color:'lightgray'}} className='d-flex justify-content-between align-items-center px-3'>                    
-                    <small>FAQs</small>
-                    <small>Privacy</small>                    
+                    <small><InformationCircleIcon style={{height:'20px'}}></InformationCircleIcon> FAQs</small>
+                    <small><ShieldCheckIcon style={{height:'20px'}}></ShieldCheckIcon> Privacy</small>                    
                 </div>
             </div>
         </section>

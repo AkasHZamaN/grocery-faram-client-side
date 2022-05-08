@@ -1,4 +1,4 @@
-import { UserAddIcon, UserCircleIcon } from "@heroicons/react/solid";
+import { ChartPieIcon, HomeIcon, UserAddIcon, UserCircleIcon, VideoCameraIcon } from "@heroicons/react/solid";
 import { signOut } from "firebase/auth";
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
@@ -27,19 +27,22 @@ const Header = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto text-center">
-                <Link className="text-white text-decoration-none me-3" to="/">
+                <Link className="text-white text-decoration-none me-3 d-flex justify-content-center align-items-center" to="/">
+                  <HomeIcon style={{height:'20px',marginRight:'2px'}}></HomeIcon>
                   Home
                 </Link>
                 <Link
-                  className="text-white text-decoration-none me-3"
+                  className="text-white text-decoration-none me-3 d-flex justify-content-center align-items-center"
                   to="/inventory"
                 >
+                  <ChartPieIcon style={{height:'20px',marginRight:'2px'}}></ChartPieIcon>
                   Inventory
                 </Link>
                 <Link
-                  className="text-white text-decoration-none me-3"
+                  className="text-white text-decoration-none me-3 d-flex justify-content-center align-items-center"
                   to="/blogs"
                 >
+                  <VideoCameraIcon style={{height:'20px',marginRight:'2px'}}></VideoCameraIcon>
                   Blogs
                 </Link>
               </Nav>

@@ -46,8 +46,8 @@ const Registration = () => {
 
   return (
     <div>
-      <div className="w-75 mx-auto text-center bg-success bg-opacity-50 rounded my-5 ">
-        <h3 className="text-success py-2">Grocery Farm Registration</h3>
+      <div style={{fontFamily:'baloo2,cursive',backgroundColor:'#6A1B4D'}} className="w-75 mx-auto text-center rounded my-5 ">
+      <img style={{height:'170px'}} src="https://i.postimg.cc/TPy4F034/grocery-farm-LOGO-1.png" alt="" />
         <form onSubmit={userRegister}>
           <input
             className="w-75 mx-auto py-1 my-2 form-control border-success d-flex flex-column"
@@ -80,16 +80,17 @@ const Registration = () => {
             placeholder="Enter Confirm Password"
           />
 
-          <p className="text-danger">{errorText}</p>
+          <p style={{fontFamily:'baloo2,cursive'}} className="text-danger">{errorText}</p>
           <input
-            className="w-25 border-0 text-white py-1 my-3 rounded bg-success"
+          style={{color:'#6A1B4D'}}
+            className="w-25 border-0 bg-white fw-bold py-1 my-3 rounded"
             type="submit"
             value="Register"
           />
         </form>
         <p className="my-2 py-2 text-white">
           Already have an account?
-          <Link className="text-decoration-none ms-2" to={"/login"}>
+          <Link style={{color:'#E07C24'}} className="text-decoration-none ms-2" to={"/login"}>
             Please login
           </Link>
         </p>

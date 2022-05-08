@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { StarIcon } from "@heroicons/react/solid";
+import { CheckCircleIcon, DotsVerticalIcon, ShoppingCartIcon, StarIcon, XCircleIcon } from "@heroicons/react/solid";
 import useProductDetails from "../../hooks/useProductDetails";
 import { toast } from "react-toastify";
 
@@ -71,7 +71,7 @@ const ItemDetails = () => {
   };
 
   return (
-    <div>
+    <div style={{fontFamily:'baloo2,cursive'}}>
       <div className="container w-100 mx-auto my-5 d-felx row row-cols-1 row-cols-lg-2 g-4">
         <div>
           <img
@@ -80,71 +80,73 @@ const ItemDetails = () => {
             src={productView.photo}
             alt=""
           />
-          <div className="w-75 mx-auto my-5">
+          <div className="w-100 my-5">
             <Link to={`/checkout/${id}`}>
-              <Button className="w-100 my-2" variant="outline-success px-3">
-                PROCEED TO CHECKOUT
+              <Button style={{backgroundColor:'#6A1B4D',color:'white'}} className="mt-5">
+                ORDER NOW <ShoppingCartIcon style={{height:'25px'}}></ShoppingCartIcon>
               </Button>
             </Link>
           </div>
         </div>
         <div>
-          <h3>{productView.name}</h3>
+          <h3 style={{color:'#6A1B4D', fontWeight:'bold'}}>{productView.name}</h3>
 
-          <p>
+          <p style={{color:'#6A1B4D'}}>
             <span>
               <StarIcon
-                style={{ height: "18px", color: " #28a745" }}
+                style={{ height: "18px", color: "#6A1B4D" }}
               ></StarIcon>
             </span>
             <span>
               <StarIcon
-                style={{ height: "18px", color: " #28a745" }}
+                style={{ height: "18px", color: "#6A1B4D" }}
               ></StarIcon>
             </span>
             <span>
               <StarIcon
-                style={{ height: "18px", color: " #28a745" }}
+                style={{ height: "18px", color: "#6A1B4D" }}
               ></StarIcon>
             </span>
             <span>
-              <StarIcon style={{ height: "18px", color: "gray" }}></StarIcon>
+              <StarIcon style={{ height: "18px", color: "#6A1B4D" }}></StarIcon>
             </span>
             <span>
               <StarIcon style={{ height: "18px", color: "gray" }}></StarIcon>
             </span>
           </p>
 
-          <h5>Price: {productView.price} ৳</h5>
+          <h5 style={{color:'#6A1B4D',fontWeight:'bold'}}>Price: {productView.price} ৳</h5>
 
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center fw-bold">
             <p className="mt-3" id="quantity">
               {productView.quantity}
             </p>
+            <small style={{margin:'0 3px'}}>/kg</small>
             <small
               style={{
                 border: "2px solid #27a745",
                 borderRadius: "5px",
                 padding: "0 10px",
                 margin: "0 5px",
+                display:'inline-flex'
               }}
             >
-              {" "}
+              <CheckCircleIcon style={{height:'20px',marginRight:'2px'}}></CheckCircleIcon>
               {productView.available}
             </small>
           </div>
 
-          <p>{productView.description}</p>
+          <p style={{color:'gray'}}>{productView.description}</p>
 
-          <p>
+          <p style={{color:'#6A1B4D'}}>
             Product Id:
-            <small className="bg-success bg-opacity-10 rounded-3 px-1 ms-1 text-success">
+            <small className="bg-success bg-opacity-10 rounded-3 px-1 ms-1">
               {productView._id}
             </small>
           </p>
-          <p>
+          <p style={{color:'#6A1B4D'}}>
             Suplier Name:
-            <small className="bg-success bg-opacity-10 rounded-3 px-1 ms-1 text-success">
+            <small className="bg-success bg-opacity-10 rounded-3 px-1 ms-1">
               {" "}
               {productView.dealer}
             </small>
@@ -156,7 +158,7 @@ const ItemDetails = () => {
                 
                 style={{
                   width: "90px",
-                  border: "1px solid  #28a745",
+                  border: "1px solid  #6A1B4D",
                   borderRadius: "5px",
                   textAlign: "center",
                   paddingBottom: "7px",
@@ -168,32 +170,35 @@ const ItemDetails = () => {
                 name="number"
                 id=""
               />
-              {/* <input className='border-0 bg-success text-white rounded-3' type="submit" name="submit" id=""/> */}
               <Button
-                className="border-0 bg-success text-white rounded-3 pt-1"
+              style={{backgroundColor:'#6A1B4D'}}
+                className="border-0 text-white rounded-3 pt-1"
                 as="input"
                 type="submit"
                 value="RE STOCK"
-              />{" "}
+              />
             </form>
 
             <div>
               <Button
+              style={{backgroundColor:'#6A1B4D'}}
                 onClick={decreaseQuantity}
                 as="input"
                 type="submit"
-                className="bg-success"
+                className="border-0"
                 value="DELEVERED"
-              />{" "}
+              />
             </div>
           </div>
         </div>
       </div>
-      <div className="w-50 mx-auto">
+      <div className="w-100 text-end">
         <Button
+        style={{backgroundColor:'#6A1B4D'}}
           onClick={getInventory}
-          variant="outline-success w-100 rounded-3"
+          variant="outline-success text-white me-3 rounded-3"
         >
+          <DotsVerticalIcon style={{height:'25px'}}></DotsVerticalIcon>
           GET MORE PRODUCT
         </Button>
       </div>
