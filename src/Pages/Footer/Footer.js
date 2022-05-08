@@ -1,4 +1,4 @@
-import { InformationCircleIcon, LocationMarkerIcon, MailIcon, PhoneIcon, ShieldCheckIcon } from '@heroicons/react/solid';
+import { ChartPieIcon, HomeIcon, IdentificationIcon, InformationCircleIcon, LocationMarkerIcon, MailIcon, PhoneIcon, QuestionMarkCircleIcon, ShieldCheckIcon } from '@heroicons/react/solid';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -22,10 +22,10 @@ const Footer = () => {
                 <div className='d-flex justify-content-between align-items-center'>
                     <div style={{color:'lightgray'}}>
                     <h5 style={{paddingBottom:'20px'}}>Quick Link</h5>
-                        <Link style={{color:'lightgray'}} className='d-block text-decoration-none py-1 fw-bold' to={'/'}>Home</Link>
-                        <Link style={{color:'lightgray'}} className='d-block text-decoration-none py-1 fw-bold' to={'/about'}>About Me</Link>
-                        <Link style={{color:'lightgray'}}  className='d-block text-decoration-none py-1 fw-bold' to={'/inventory'}>Inventory</Link>
-                        <Link style={{color:'lightgray'}} className='d-block text-decoration-none py-1 fw-bold' to={'/about'}>Ask Me</Link>
+                        <Link style={{color:'lightgray'}} className='d-block text-decoration-none py-1 fw-bold' to={'/'}><HomeIcon style={{height:'20px'}}></HomeIcon> Home</Link>
+                        <Link style={{color:'lightgray'}} className='d-block text-decoration-none py-1 fw-bold' to={'/about'}><IdentificationIcon style={{height:'20px'}}></IdentificationIcon> About Me</Link>
+                        <Link style={{color:'lightgray'}}  className='d-block text-decoration-none py-1 fw-bold' to={'/inventory'}><ChartPieIcon style={{height:'20px'}}></ChartPieIcon> Inventory</Link>
+                        <Link style={{color:'lightgray'}} className='d-block text-decoration-none py-1 fw-bold' to={'/about'}><QuestionMarkCircleIcon style={{height:'20px'}}></QuestionMarkCircleIcon> Ask Me</Link>
                     </div>
                     <div style={{color:'lightgray'}}>
                         <h5 style={{paddingBottom:'5px'}}>My Contacts</h5>

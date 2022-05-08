@@ -1,4 +1,4 @@
-import { ChartPieIcon, HomeIcon, UserAddIcon, UserCircleIcon, VideoCameraIcon } from "@heroicons/react/solid";
+import { BookmarkIcon, ChartPieIcon, DatabaseIcon, HomeIcon, PlusIcon, UserAddIcon, UserCircleIcon, VideoCameraIcon } from "@heroicons/react/solid";
 import { signOut } from "firebase/auth";
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
@@ -28,21 +28,21 @@ const Header = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto text-center">
                 <Link className="text-white text-decoration-none me-3 d-flex justify-content-center align-items-center" to="/">
-                  <HomeIcon style={{height:'20px',marginRight:'2px'}}></HomeIcon>
+                  <HomeIcon style={{height:'20px',marginRight:'4px'}}></HomeIcon>
                   Home
                 </Link>
                 <Link
                   className="text-white text-decoration-none me-3 d-flex justify-content-center align-items-center"
                   to="/inventory"
                 >
-                  <ChartPieIcon style={{height:'20px',marginRight:'2px'}}></ChartPieIcon>
+                  <ChartPieIcon style={{height:'20px',marginRight:'4px'}}></ChartPieIcon>
                   Inventory
                 </Link>
                 <Link
                   className="text-white text-decoration-none me-3 d-flex justify-content-center align-items-center"
                   to="/blogs"
                 >
-                  <VideoCameraIcon style={{height:'20px',marginRight:'2px'}}></VideoCameraIcon>
+                  <VideoCameraIcon style={{height:'20px',marginRight:'4px'}}></VideoCameraIcon>
                   Blogs
                 </Link>
               </Nav>
@@ -50,21 +50,25 @@ const Header = () => {
                 {
                   user && <>
                   <Link
-                  className="text-white text-decoration-none me-3"
+                  className="text-white text-decoration-none me-3 d-flex justify-content-center align-items-center"
                   to="/myProduct"
                 >
+                  <BookmarkIcon style={{height:'22px'}}></BookmarkIcon>
                   My Product
                 </Link>
                 <Link
-                  className="text-white text-decoration-none me-3"
+                  className="text-white text-decoration-none me-3 d-flex justify-content-center align-items-center"
                   to="/addProduct"
                 >
+                  <PlusIcon style={{height:'22px',marginRight:'2px'}}></PlusIcon>
                   Add Product
+                  
                 </Link>
                 <Link
-                  className="text-white text-decoration-none me-3"
+                  className="text-white text-decoration-none me-3 d-flex justify-content-center align-items-center"
                   to="/myInventory"
                 >
+                  <DatabaseIcon style={{height:'22px',marginRight:'2px'}}></DatabaseIcon>
                   Manage Inventory
                 </Link>
                   </>

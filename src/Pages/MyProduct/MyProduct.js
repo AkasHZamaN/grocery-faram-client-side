@@ -57,7 +57,7 @@ const MyProduct = () => {
                 {
                     orders.map(order => <div
                     key={order._id} order={order}>
-                        <div className='d-flex justify-content-center align-items-center m-3 p-3 row row-cols-1 row-cols-lg-2'>
+                        <div style={{fontFamily:'baloo2,cursive'}} className='d-flex justify-content-center align-items-center m-3 p-3 row row-cols-1 row-cols-lg-2'>
                             <div>
                                 <img className='w-100 mx-auto rounded-3' src={order.photo} alt="" />
                             </div>
@@ -65,10 +65,10 @@ const MyProduct = () => {
                             <p><small><PencilAltIcon style={{height:'20px'}}></PencilAltIcon>{order.id}</small></p>
                             <h6 className='fw-bold text-gray'><small className='text-uppercase fs-5'>{order.name}</small></h6>
                             <p className='fw-bold text-gray'>Quantity: <span className='text-success  fs-5'>{order.quantity}</span> <span className='text-gray'>/kg</span></p>
-                            <p><UserIcon style={{height:'20px'}}></UserIcon> <small className='text-success fw-bold'>{order.displayName}</small></p>
+                            <p><UserIcon style={{height:'20px'}}></UserIcon> <small style={{color:'gray',fontWeight:'bold'}}>{order.displayName}</small></p>
                             <p><MailOpenIcon style={{height:'20px'}}></MailOpenIcon> <span className='text-danger'>{order.email}</span></p>
-                            <p><LocationMarkerIcon style={{height:'20px'}}></LocationMarkerIcon> <small className='text-success fw-bold'>{order.address}</small></p>
-                            <p><PhoneIcon style={{height:'20px'}}></PhoneIcon> <small className='text-success fw-bold'>{order.phone}</small></p>
+                            <p><LocationMarkerIcon style={{height:'20px'}}></LocationMarkerIcon> <small style={{color:'gray',fontWeight:'bold'}}>{order.address}</small></p>
+                            <p><PhoneIcon style={{height:'20px'}}></PhoneIcon> <small style={{color:'gray',fontWeight:'bold'}}>{order.phone}</small></p>
                             <p className='w-100 py-1 text-center rounded-3'><TrashIcon onClick={()=>deleteItem(order._id)} style={{height:'30px', cursor:'pointer', color:'#6A1B4D',border:'1px solid #6A1B4D',padding:'2px 50px',borderRadius:'8px'}}></TrashIcon></p>
                             </div>
                         </div>
