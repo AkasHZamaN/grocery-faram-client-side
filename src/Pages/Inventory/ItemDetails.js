@@ -38,12 +38,13 @@ const ItemDetails = () => {
         .then(data => {
             console.log(data);
             toast('Quantity Successfully Added')
+            event.target.reset();
             // setProductView(reStockQuantity);
             window.location.reload();
         });
       }
       else{
-          alert('Please INPUT Positive Value otherwise get Error');
+          toast('Please INPUT Positive Value');
       }
   };
 
@@ -192,7 +193,7 @@ const ItemDetails = () => {
           </div>
         </div>
       </div>
-      <div className="w-100 text-end">
+      <div className="w-100 pb-5 text-end">
         <Button
         style={{backgroundColor:'#6A1B4D'}}
           onClick={getInventory}
