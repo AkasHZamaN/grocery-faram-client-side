@@ -1,8 +1,25 @@
-# Getting Started with Create React App
+# GROCERY FARM & ORGANIC FOOD FARM LIMITED
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available In this Projects are :-
+* I had created custom hooks.
+* Use Destructuring when shows data in the UI.
+* Here I get data from database.
+* here all input data will be store in database and order data also.
+* I also set react routes and dynamic route and some files are Protected. 
+* This project is authentication based and have validation and verification. 
+* Password and Email and another social sign is used for authentication.
+* User can see the order product by using their email address.
+* User can modifed stored data like update or delete.
+
+## Available Framework and Library
+* I use React Boostrap framework for responsive.
+* I use a JavaScript Library which is React.
+* Use MongoDb for store data.
+* Use Node js for easily get access for database.
+* Also used Firebase for Authentication that's make our day easy.
+* Also used for some neccessary icons that's why i install heroicons framwork.
 
 In the project directory, you can run:
 
