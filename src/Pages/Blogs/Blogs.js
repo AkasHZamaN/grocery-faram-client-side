@@ -3,7 +3,7 @@ import React from 'react';
 const Blogs = () => {
     return (
         <div>
-            <div className='container row row-cols-1 row-cols-lg-1'>
+            <div className='container mx-auto row row-cols-1 row-cols-lg-1'>
             <div style={{fontFamily:'baloo2,cursive'}} className='mt-5'>
                 <h5>What's defference between JavaScript and Node.js ?</h5>
                 <small>Ans: JavaScript is a simple programming language that runs in any browser JavaScript Engine. Whereas Node JS is an interpreter or running environment for a JavaScript programming language that holds many excesses, it requires libraries that can easily be accessed from JavaScript programming for better use.</small>
