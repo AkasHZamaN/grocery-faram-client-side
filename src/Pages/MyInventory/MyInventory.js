@@ -15,7 +15,7 @@ const MyInventory = () => {
     }
 
     return (
-        <div>
+        <div style={{backgroundImage:"url('https://i.postimg.cc/65sRGkb3/add-banner-4.png')"}}>
             <h5 style={{fontFamily:'baloo2,cursive', textTransform:'uppercase',marginLeft:'20px', marginTop:'35px',fontWeight:'bold',color:'#6A1B4D'}}><HomeIcon style={{height:'25px', color:'#6A1B4D'}}></HomeIcon> Grocery farm warehouse</h5>
             <div className='w-100 mx-auto row row-cols-1 row-cols-lg-3 g-4 my-3'>
                 {

@@ -51,7 +51,7 @@ const SocialLogin = () => {
         <p>
             {errorText}
         </p>
-        <div className="w-50 mx-auto">
+        <div className="w-50 mx-auto pb-4">
                 <Button
                     style={{backgroundColor:'#6A1B4D',fontFamily:'baloo2,cursive'}}
                     onClick={() => signInWithGoogle()}

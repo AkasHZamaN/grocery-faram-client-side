@@ -1,6 +1,6 @@
 import React from "react";
 import 'react-toastify/dist/ReactToastify.css';
-import { Button } from "react-bootstrap";
+import { Button, Carousel } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { PlusCircleIcon } from "@heroicons/react/solid";
@@ -34,8 +34,11 @@ const AddProduct = () => {
   }
   
   return (
-    <div>
-        <h4 style={{fontFamily:'baloo2, cursive', color:'#6A1B4D'}} className="mt-5 fw-bold d-flex justify-content-center align-items-center">INSERT YOUR NEW PRODUCT <PlusCircleIcon style={{height:'35px',marginLeft:'5px'}}></PlusCircleIcon></h4>
+    <div style={{backgroundImage:"url('https://i.postimg.cc/HLbjmRzc/add-banner-1.png')"}} className=" mt-3">
+        <div className="w-100 mx-auto d-flex justify-content-between row row-cols1 row-cols-lg-2 g-3">
+
+      <div className="mt-5">
+        <h4 style={{fontFamily:'baloo2, cursive', color:'#6A1B4D'}} className="fw-bold d-flex justify-content-center align-items-center">INSERT YOUR NEW PRODUCT <PlusCircleIcon style={{height:'35px',marginLeft:'5px'}}></PlusCircleIcon></h4>
       <div className="w-75 mx-auto my-5">
         <form style={{fontFamily:'baloo2, cursive'}} className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
         <input className="mb-2 p-2 rounded" style={{border:'1px solid #6A1B4D'}} placeholder="Photo Url"  type="text" {...register("photo")} required/>
@@ -53,9 +56,53 @@ const AddProduct = () => {
          
           <Button style={{backgroundColor:'#6A1B4D',color:'white'}} variant="" as="input" type="submit" value="ADD PRODUCT"/>
            
-        </form>
+         </form>
+        </div>
       </div>
+      <div>
+
+        {/* carousal start */}
+      <div className="w-75 mx-auto mt-5 pb-5">
+        <Carousel style={{fontFamily:'baloo2,cursive', marginRight:'10px'}}>
+          <Carousel.Item>
+            <img
+              style={{height:'1000px'}}
+              className="d-block w-100 rounded-3 "
+              src="https://i.postimg.cc/7hQfRXW6/verticale-Banner-3.png"
+              alt="First slide"
+            />
+            <Carousel.Caption>      
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+            style={{height:'1000px'}}
+              className="d-block w-100 rounded-3 "
+              src="https://i.postimg.cc/g2hphd3j/vbanner-3-1.png"
+              alt="Second slide"
+            />
+            <Carousel.Caption> 
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+            style={{height:'1000px'}}
+              className="d-block rounded-3 "
+              src="https://i.postimg.cc/85zkVMWr/verticle-Banner-2.png"
+              alt="Third slide"
+            />
+
+            <Carousel.Caption>
+              
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </div>
+      {/* carousal end */}
     </div>
+        
+   </div>    
+   </div>
   );
 };
 

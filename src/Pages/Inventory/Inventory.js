@@ -14,7 +14,7 @@ const Inventory = () => {
     }
 
     return (
-        <div>
+        <div style={{backgroundImage:"url('https://i.postimg.cc/65sRGkb3/add-banner-4.png')"}}>
             <h4 style={{fontFamily:'baloo2, cursive',color:'#6A1B4D'}} className="text-center my-5 text-uppercase fw-bold"><CollectionIcon style={{height:'35px'}}></CollectionIcon> Fresh & organic foods collection</h4>
             <div className='w-100 mx-auto row row-cols-1 row-cols-lg-3 g-4'>
                 {
@@ -23,6 +23,9 @@ const Inventory = () => {
             </div>
             <div className='w-100 text-end'>
            <Button style={{fontFamily:'baloo2, cursive',backgroundColor:'white',border:'1px solid #6A1B4D',fontWeight:'normal', color:'#6A1B4D',margin:'0 20px'}} onClick={getManageInventory}><DuplicateIcon style={{height:'25px'}}></DuplicateIcon> MANAGE PRODUCT</Button>
+           </div>
+           <div className="mx-2 py-3">
+            <img style={{height:'450px'}} className="w-100 my-3 rounded-3" src="https://i.postimg.cc/0yh53KXn/sale.png" alt="" />
            </div>
         </div>
     );

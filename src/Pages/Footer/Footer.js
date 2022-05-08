@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <section className='w-100' style={{backgroundColor:'#6A1B4D', fontFamily:'baloo2, cursive'}}>
 
-            <div className='w-100 mx-auto d-flex justify-content-between align-items-center row row-cols-1 row-cols-lg-3 g-2 p-3 mt-5'>
+            <div className='w-100 mx-auto d-flex justify-content-between align-items-center row row-cols-1 row-cols-lg-3 g-2 p-3'>
                 
                 <div className='d-flex justify-content-center  align-items-center'>
                     <img style={{width:'200px'}} className='h-50' src="https://i.postimg.cc/TPy4F034/grocery-farm-LOGO-1.png" alt="" />

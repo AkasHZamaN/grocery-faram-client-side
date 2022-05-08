@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div>
+        <div style={{backgroundImage:"url('https://i.postimg.cc/65sRGkb3/add-banner-4.png')"}}>
             <div className='container mx-auto row row-cols-1 row-cols-lg-1'>
             <div style={{fontFamily:'baloo2,cursive'}} className='mt-5'>
                 <h5>What's defference between JavaScript and Node.js ?</h5>

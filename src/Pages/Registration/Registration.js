@@ -26,8 +26,8 @@ const Registration = () => {
     const password = event.target.password.value;
     const confirmPassword = event.target.confirmPassword.value;
 
-    if (password !== confirmPassword) {
-      setErrorText(`Doesn't Match Your Password Please Check again!!`);
+    if (password.length && confirmPassword.length !== 8) {
+      setErrorText(`Password must be 8 character check again !!`);
     }
     else{
         await createUserWithEmailAndPassword(email, password);
@@ -45,7 +45,7 @@ const Registration = () => {
   }
 
   return (
-    <div>
+    <div style={{backgroundImage:"url('https://i.postimg.cc/65sRGkb3/add-banner-4.png')"}}>
       <div style={{fontFamily:'baloo2,cursive',backgroundColor:'#6A1B4D'}} className="w-75 mx-auto text-center rounded my-5 ">
       <img style={{height:'170px'}} src="https://i.postimg.cc/TPy4F034/grocery-farm-LOGO-1.png" alt="" />
         <form onSubmit={userRegister}>
@@ -80,7 +80,7 @@ const Registration = () => {
             placeholder="Enter Confirm Password"
           />
 
-          <p style={{fontFamily:'baloo2,cursive'}} className="text-danger">{errorText}</p>
+          <p style={{fontFamily:'baloo2,cursive'}} className="text-white">{errorText}</p>
           <input
           style={{color:'#6A1B4D'}}
             className="w-25 border-0 bg-white fw-bold py-1 my-3 rounded"

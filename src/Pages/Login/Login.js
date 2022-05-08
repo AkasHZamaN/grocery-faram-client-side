@@ -25,7 +25,7 @@ const Login = () => {
       ] = useSignInWithEmailAndPassword(auth);
 
       if(user){
-        // navigate(from, { replace: true });
+        navigate(from, { replace: true });
     }
 
     if(loading || sending){
@@ -37,14 +37,17 @@ const Login = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-       await signInWithEmailAndPassword(email, password)
-       .catch(
-           setErrorText('Please Check Your Email && Password!!')
-       )
+        if( password.length !== 8 ){
+          setErrorText('Please Check Your Email && Password!!')
+        }
+        else{
+          await signInWithEmailAndPassword(email, password)
+        }
+
        const {data} = await axios.post('http://localhost:5000/login', {email});
        localStorage.setItem('accessToken', data.accessToken);
-       navigate(from, { replace: true });
     }
+      // reset password link
     const resetPassword = async() =>{
       const email = emailRef.current.value;
       await sendPasswordResetEmail(email);
@@ -57,7 +60,7 @@ const Login = () => {
     }
 
   return (
-    <div>
+    <div style={{backgroundImage:"url('https://i.postimg.cc/65sRGkb3/add-banner-4.png')"}}>
       <div style={{backgroundColor:'#6A1B4D'}} className="w-75 mx-auto text-center rounded my-5 ">
         <img style={{height:'170px'}} src="https://i.postimg.cc/TPy4F034/grocery-farm-LOGO-1.png" alt="" />
         <form style={{fontFamily:'baloo2,cursive'}} onSubmit={userLogin}>
@@ -80,15 +83,17 @@ const Login = () => {
           <p onClick={resetPassword} className="w-75 mx-auto text-start">
               <small style={{cursor:'pointer', color:'white', fontFamily:'baloo2, cursive'}}>Forget your password?</small>
           </p>
-          <p className="text-warning">{errorText}</p>
+
+          <p className="text-white">{errorText}</p>
+          
           <input
           style={{backgroundColor:'white',color:'#6A1B4D'}}
             className="w-25 border-0 fw-bold py-1 my-3 rounded "
             type="submit"
             value="Login"
-            
           />
         </form>
+
         <p style={{fontFamily:'baloo2, cursive'}} className="py-2 text-white">
           Are you new user?
           <Link style={{color:'#E07C24'}} className="text-decoration-none ms-2" to={"/registration"}>

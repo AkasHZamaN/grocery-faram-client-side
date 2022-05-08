@@ -1,4 +1,4 @@
-import { CollectionIcon, DotsVerticalIcon } from "@heroicons/react/solid";
+import { CollectionIcon, DotsVerticalIcon, TruckIcon } from "@heroicons/react/solid";
 import React from "react";
 import { Button, Carousel } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -13,14 +13,14 @@ const Home = () => {
         navigate('/inventory');
     }
   return (
-    <div>
-      <div className="my-3">
-        <Carousel>
+    <div style={{backgroundImage:"url('https://i.postimg.cc/65sRGkb3/add-banner-4.png')"}}>
+      <div className="pb-3">
+        <Carousel style={{fontFamily:'baloo2,cursive'}}>
           <Carousel.Item>
             <img
                 style={{height:'650px'}}
               className="d-block w-100"
-              src="https://i.postimg.cc/s20hNztT/banner-1.png"
+              src="https://i.postimg.cc/QMBJdjVd/banner-1.jpg"
               alt="First slide"
             />
             <Carousel.Caption>
@@ -58,6 +58,10 @@ const Home = () => {
           </Carousel.Item>
         </Carousel>
       </div>
+
+      <div className="mx-2">
+        <img style={{boxShadow:'5px 5px 20px'}} className="w-100 rounded-3" src="https://i.postimg.cc/HWB0X6RM/parcenteage.png" alt="" />
+        </div>
         
         {/* home products  */}
 
@@ -70,6 +74,10 @@ const Home = () => {
         </div>
         <div className="w-100 text-end my-3">  
          <Button style={{fontFamily:'baloo2,cursive',border:'1px solid #6A1B4D ',backgroundColor:'white', color:'#6A1B4D', margin:'0 20px'}} onClick={goInventory}><DotsVerticalIcon style={{height:'22px'}}></DotsVerticalIcon>More Product </Button>
+        </div>
+        <div className="mx-2 pb-2">
+          <h4 style={{fontFamily:'baloo2,cursive',color:'#6A1B4D',textAlign:'start',display:'flex',alignItems:'center'}}>Delevery Service <TruckIcon style={{height:'30px',marginLeft:'2px'}}></TruckIcon></h4>
+        <img style={{height:'600px',boxShadow:'5px 5px 20px'}} className="w-100 my-3 rounded-3" src="https://i.postimg.cc/1zVMK2bX/nuw-banner-pix-1.png" alt="" />
         </div>
         </div>
     </div>

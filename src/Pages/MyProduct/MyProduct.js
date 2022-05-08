@@ -50,8 +50,8 @@ const MyProduct = () => {
 
 
     return (
-        <div>
-            <h4 style={{color:'#6A1B4D'}} className='text-center my-3'><ClipboardListIcon style={{height:'35px'}}                                                ></ClipboardListIcon> YOUR ORDER SUMMERY</h4>
+        <div style={{backgroundImage:"url('https://i.postimg.cc/65sRGkb3/add-banner-4.png')"}}>
+            <h4 style={{color:'#6A1B4D',fontFamily:'baloo2,cursive'}} className='text-center d-flex justify-content-center align-items-center my-3'><ClipboardListIcon style={{height:'35px'}}                                                ></ClipboardListIcon> YOUR ORDER SUMMERY</h4>
             
             <div className='w-100 mx-auto row row-cols-1 row-cols-lg-2 g-3 my-3'>
                 {
