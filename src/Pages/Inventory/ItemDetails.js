@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { CheckCircleIcon, DotsVerticalIcon, ShoppingCartIcon, StarIcon, XCircleIcon } from "@heroicons/react/solid";
+import { CheckCircleIcon, DotsVerticalIcon, ShoppingCartIcon, StarIcon} from "@heroicons/react/solid";
 import useProductDetails from "../../hooks/useProductDetails";
 import { toast } from "react-toastify";
 
@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 const ItemDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [productView, setProductView] = useProductDetails(id);
+  const [productView] = useProductDetails(id);
 
   const getInventory = () => {
     navigate("/inventory");

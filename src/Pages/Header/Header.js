@@ -1,4 +1,4 @@
-import { BookmarkIcon, ChartPieIcon, DatabaseIcon, HomeIcon, PlusIcon, UserAddIcon, UserCircleIcon, VideoCameraIcon } from "@heroicons/react/solid";
+import { BookmarkIcon, CakeIcon, ChartPieIcon, DatabaseIcon, HomeIcon, PlusIcon, UserAddIcon, UserCircleIcon, VideoCameraIcon } from "@heroicons/react/solid";
 import { signOut } from "firebase/auth";
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
@@ -44,6 +44,13 @@ const Header = () => {
                 >
                   <VideoCameraIcon style={{height:'20px',marginRight:'4px'}}></VideoCameraIcon>
                   Blogs
+                </Link>
+                <Link
+                  className="text-white text-decoration-none me-3 d-flex justify-content-center align-items-center"
+                  to="/fruits"
+                >
+                  <CakeIcon style={{height:'20px',marginRight:'4px'}}></CakeIcon>
+                  Fruits
                 </Link>
               </Nav>
               <Nav className="ms-auto text-center">

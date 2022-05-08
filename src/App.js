@@ -17,6 +17,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Blogs from './Pages/Blogs/Blogs';
 import Checkout from './Pages/Checkout/Checkout';
 import Footer from './Pages/Footer/Footer';
+import Fruits from './Pages/Fruits/Fruits';
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/inventory' element={<Inventory></Inventory>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/fruits' element={<Fruits></Fruits>}></Route>
 
         <Route path='/inventoryItem/:id' element={
         <PrivateRoute>
