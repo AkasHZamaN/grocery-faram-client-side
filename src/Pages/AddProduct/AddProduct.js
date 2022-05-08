@@ -57,6 +57,9 @@ const AddProduct = () => {
           <Button style={{backgroundColor:'#6A1B4D',color:'white'}} variant="" as="input" type="submit" value="ADD PRODUCT"/>
            
          </form>
+         <div className="w-100 mt-5 mx-auto">
+           <img style={{width:'100%'}} src="https://i.postimg.cc/TYvhVwpD/bg-shopping-img.png" alt="" />
+         </div>
         </div>
       </div>
       <div>
