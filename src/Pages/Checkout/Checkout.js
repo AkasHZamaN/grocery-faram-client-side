@@ -38,7 +38,7 @@ const Checkout = () => {
 
     return (
         <div>
-            <div>
+            <div className='pb-3'>
             <h4 className='w-75 mx-auto my-4'>ORDER ID: {id}</h4>
                 <form onSubmit={handlePlaceOrder}>
                     <input style={{border:'1px solid #28a745',borderRadius:'5px'}} className='d-flex flex-column mb-2 px-3 py-2 w-75 mx-auto' type="text" name="displayName" id="displayName" defaultValue={user?.displayName} placeholder='Your Name' readOnly required/>
