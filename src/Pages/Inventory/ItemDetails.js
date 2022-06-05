@@ -26,7 +26,7 @@ const ItemDetails = () => {
         const reStockQuantity = { quantity };
         console.log(reStockQuantity);
 
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://cryptic-bastion-13696.herokuapp.com/product/${id}`;
         fetch(url, {
             method:'PUT',
             headers: {
@@ -55,7 +55,7 @@ const ItemDetails = () => {
     // setProductView(updateQuantity);
 
     // send data in the database
-    const url = `http://localhost:5000/product/${id}`;
+    const url = `https://cryptic-bastion-13696.herokuapp.com/product/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

@@ -4,7 +4,7 @@ const useProductDetails = (id) =>{
     const [productView, setProductView] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/product/${id}`;
+    const url = `https://cryptic-bastion-13696.herokuapp.com/product/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

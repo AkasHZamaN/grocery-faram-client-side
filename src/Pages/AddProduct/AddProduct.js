@@ -11,7 +11,7 @@ const AddProduct = () => {
 
   const onSubmit = (data, event) => {
     if(data !== false){
-      const url = `http://localhost:5000/product`;
+      const url = `https://cryptic-bastion-13696.herokuapp.com/product`;
       fetch(url,{
         method: 'POST',
         headers: {

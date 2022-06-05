@@ -9,7 +9,7 @@ const MyInventoryDetails = ({prodItem}) => {
     const deleteItem = id =>{
         const proceed = window.confirm('WARNING!! Are You Sure?');
         if(proceed){
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://cryptic-bastion-13696.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
